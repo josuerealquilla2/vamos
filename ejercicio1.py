@@ -1,5 +1,5 @@
 vocales=['a','e','i','o','u']
-lista=[]
+lista={}
 largas=""
 pares=""
 corta=""
@@ -7,8 +7,11 @@ especial=""
 repetidas=""
 palabras=input("ingrese alguna palabra")
 if len(palabras)>=5:
-    largas=palabras
-    lista
+    largas = palabras # corregir
+    dicc={
+        "larga":palabras,
+    }
+    lista=dicc
 else:
     corta.append(palabras)
 
