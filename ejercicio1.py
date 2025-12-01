@@ -1,25 +1,36 @@
 vocales=['a','e','i','o','u']
-lista={}
+lista=[]
 largas=""
 pares=""
 corta=""
 especial=""
 repetidas=""
-palabras=input("ingrese alguna palabra")
-if len(palabras)>=5:
-    largas = palabras # corregir
-    dicc={
-        "larga":palabras,
-    }
-    lista=dicc
-else:
-    corta.append(palabras)
 
-if palabras in vocales:
-    especial.append(palabras)
+salir=False
+while not salir:
+    palabras = input("ingrese alguna palabra")
+    for palabra in palabras:
+        if len(palabra) >= 5:
+            lista = {
+                "larga": palabras,
+            }
+        else:
+            lista = {
+                "cortas": palabras,
+            }
+        if palabra in vocales:
+            lista = {
+                "escpeciales": palabras,
+            }
+        if len(palabra) % 2 == 0:
+            lista = {
+                "pares": palabras,
+            }
+    if palabras== "salir":
+        salir=True
 
-if len(palabras)% 2 == 0:
-    pares.append(palabras)
+for i in lista:
+    print(i)
 
 
 
