@@ -23,5 +23,6 @@ while True:
     print(f"binevenido ip {registrado} ")
     print(f"direcioIp={direccion[0]}-puerto{direccion[1]}-voto{datos.decode()} ")
     print(f"media={media}")
+    print(f"totaldeVotos={totaldeVotos}")
 
 

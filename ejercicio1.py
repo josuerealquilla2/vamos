@@ -1,31 +1,26 @@
 vocales=['a','e','i','o','u']
 lista=[]
-largas=""
-pares=""
-corta=""
-especial=""
-repetidas=""
-
 salir=False
 while not salir:
     palabras = input("ingrese alguna palabra")
     for palabra in palabras:
         if len(palabra) >= 5:
-            lista = {
+            lista.append( {
                 "larga": palabras,
-            }
+            })
         else:
-            lista = {
+            lista.append({
                 "cortas": palabras,
-            }
+            })
         if palabra in vocales:
-            lista = {
-                "escpeciales": palabras,
-            }
+            lista.append({
+                "especiales": palabras,
+            })
+
         if len(palabra) % 2 == 0:
-            lista = {
+            lista.append({
                 "pares": palabras,
-            }
+            })
     if palabras== "salir":
         salir=True
 
