@@ -1,6 +1,6 @@
 import socket as sk
 from copyreg import pickle
-from plistlib import dumps
+
 
 sock=sk.socket(sk.AF_INET,sk.SOCK_DGRAM)
 puerto=23000
@@ -11,3 +11,5 @@ while not salir:
     print("voto",voto)
     if voto=="salir":
         salir=True
+
+#me olvide la sintaxis de pickle

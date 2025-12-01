@@ -2,7 +2,7 @@ vocales=['a','e','i','o','u']
 lista=[]
 salir=False
 while not salir:
-    palabras = input("ingrese alguna palabra")
+    palabras = input("ingrese alguna palabra o salir")
     for palabra in palabras:
         if len(palabra) >= 5:
             lista.append( {
@@ -24,8 +24,6 @@ while not salir:
     if palabras== "salir":
         salir=True
 
-for i in lista:
-    print(i)
 
 
 

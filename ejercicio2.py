@@ -1,20 +1,29 @@
 martiz = [
-
+    {"areas":"a1"}, {"areas":"a2"}, {"areas":"a3"},
+    {"areas":"b1"}, {"areas":"b2"}, {"areas":"b3"},
+    {"areas":"c2"}, {"areas":"c3"}, {"areas":"c4"}
       ]
+
+
+def pintarMartiz(area,reforestado):
+    if area == martiz["areas"]:
+        nombrearea=input("nombre area")
+        martiz.append({"area": nombrearea, "reforestado":reforestado})
 
 
 def reforestar(area):
     for i in martiz:
         if i["area"] == area:
             return i["reforestado"][True]
-def nuevoCampo(planta):
+def nuevoCampo(area,planta):
     permitidos=["pino","encima","haya","roble","matorral"]
-    if planta in permitidos:
-        martiz.append({
-            "tipoPrincipal": planta,
-        })
-
-def pintarMartiz(area,reforestado):
+    if area == martiz["areas"] and planta in permitidos:
+        nuevo = {"tipoPrincipal":f"{planta}"}
+        martiz.append(nuevo)
+def losreforestados():
+    for i in martiz:
+        if i["reforestado"] == True:
+            return i["reforestado"]
 
 
 
@@ -30,4 +39,3 @@ if menu == "2":
     plantas= input("escriba la planta: ")
     print(nuevoCampo(plantas))
 
-   
